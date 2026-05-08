@@ -24,10 +24,10 @@
             <div class="hero-text">
                 <h1>Contact Kai's Car Care – 24/7</h1>
                 <p class="hero-subtitle">
-                    Have a question, need a quote, or ready to schedule a pickup and drop-off? Use the form below and we’ll respond as quickly as possible, day or night.
+                    Have a question, need a quote, or ready to schedule a pickup and drop-off? Use the form below and we'll respond as quickly as possible, day or night.
                 </p>
                 <p class="hero-tagline">
-                    We’re available 24/7 for messages and scheduling requests.
+                    We're available 24/7 for messages and scheduling requests.
                 </p>
             </div>
         </section>
@@ -40,16 +40,19 @@
                     <h2>Send a 24/7 Request</h2>
                     <form class="contact-form" action="https://formsubmit.co/kaicollazo1@gmail.com" method="POST">
                         <input type="hidden" name="_subject" value="New Kai's Car Care inquiry">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_url" value="https://kaicollazo.github.io/contact.html">
+                        <input type="hidden" name="_next" value="https://kaicollazo.github.io/thanks.html">
+                        
                         <div class="form-row">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your name">
+                            <label for="name">Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
                         </div>
 
                         <div class="form-row">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="you@example.com">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
                         </div>
 
                         <div class="form-row">
@@ -59,7 +62,8 @@
 
                         <div class="form-row">
                             <label for="contact-method">Preferred contact method</label>
-                            <select id="contact-method" name="contact-method">
+                            <select id="contact-method" name="contact-method" required>
+                                <option value="">Select one</option>
                                 <option value="call">Call</option>
                                 <option value="text">Text</option>
                                 <option value="email">Email</option>
@@ -67,7 +71,7 @@
                         </div>
 
                         <div class="form-row">
-                            <label for="vehicle-make-model">Vehicle make &amp; model</label>
+                            <label for="vehicle-make-model">Vehicle make & model</label>
                             <input type="text" id="vehicle-make-model" name="vehicle-make-model" placeholder="Example: 2021 Ford F-150">
                         </div>
 
@@ -77,13 +81,14 @@
                         </div>
 
                         <div class="form-row">
-                            <label for="service">Service you’re interested in</label>
-                            <select id="service" name="service">
+                            <label for="service">Service you're interested in <span class="required">*</span></label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
                                 <option value="quick-wash-interior">Quick Wash + Interior</option>
                                 <option value="interior-refresh">Interior Refresh</option>
                                 <option value="interior-deep-clean">Interior Deep Clean</option>
                                 <option value="full-detail">Full Detail</option>
-                                <option value="bike-wash-detail">Bike Wash &amp; Detail</option>
+                                <option value="bike-wash-detail">Bike Wash & Detail</option>
                                 <option value="not-sure">Not sure / Please recommend</option>
                             </select>
                         </div>
@@ -94,14 +99,14 @@
                         </div>
 
                         <div class="form-row">
-                            <label for="message">How can we help?</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your vehicle and what you’re looking for."></textarea>
+                            <label for="message">How can we help? <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your vehicle and what you're looking for." required></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary">Send 24/7 Request</button>
 
                         <p class="form-note">
-                            We only use your information to respond to your request and schedule your detail.
+                            We only use your information to respond to your request and schedule your detail. <span class="required">* Required fields</span>
                         </p>
                     </form>
                 </div>
