@@ -47,6 +47,13 @@ img {
     z-index: 100;
 }
 
+/* Right side of header: nav + logo together */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
 /* Logo text (left side) */
 .logo {
     display: flex;
@@ -79,11 +86,11 @@ img {
     align-items: center;
     text-decoration: none;
     padding: 0;
-    margin-left: 0.5rem;}
+}
 
 /* Header logo image sizing */
 .logo-image {
-    height: 120px;
+    height: 120px; /* adjust for bigger/smaller logo */
     width: auto;
 }
 
@@ -416,9 +423,9 @@ img {
     }
 
     /* Keep nav/logo aligned on smaller screens */
-    .nav {
+    .header-right {
         width: 100%;
-        justify-content: flex-start;
+        justify-content: space-between;
     }
 }
 
@@ -428,11 +435,13 @@ img {
         padding: 2rem 1rem;
     }
 
-    .nav {
+    .header-right {
         width: 100%;
-        justify-content: flex-start;
+        justify-content: space-between;
     }
-}/* Kill any arrow or pseudo-content on the logo link */
+}
+
+/* Kill any arrow or pseudo-content on the logo link */
 .logo-link::before,
 .logo-link::after,
 .logo-image::before,
