@@ -73,7 +73,7 @@ img {
 
 /* Center nav */
 .header-nav {
-    flex: 1; /* takes available space between left and right */
+    flex: 1;
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -114,7 +114,7 @@ img {
 }
 
 .logo-image {
-    height: 120px; /* make the logo big; adjust if needed */
+    height: 120px; /* adjust up/down if you want */
     width: auto;
 }
 
