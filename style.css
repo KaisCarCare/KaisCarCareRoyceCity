@@ -22,18 +22,24 @@ img {
     display: block;
 }
 
-/* Header: simple, reliable layout */
+/* Header */
 .site-header {
     position: sticky;
     top: 0;
     z-index: 100;
+    background-color: #0b0c10;
+}
+
+/* Header layout */
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    padding: 1rem 1.5rem;
-    background-color: #0b0c10;
+    gap: 1.5rem;
 }
 
 /* Left text logo */
@@ -51,7 +57,7 @@ img {
     letter-spacing: 0.08em;
     text-transform: uppercase;
     font-weight: 600;
-    color: #f5d36b;
+    color: #f5d36b; /* gold */
 }
 
 .logo-sub {
@@ -59,7 +65,7 @@ img {
     color: #c2c2c2;
 }
 
-/* Center nav */
+/* Middle nav */
 .header-nav {
     flex: 1;
     display: flex;
@@ -93,7 +99,7 @@ img {
     color: #0b0c10;
 }
 
-/* Logo link + size – NO absolute positioning */
+/* Logo link + size */
 .logo-link {
     display: flex;
     align-items: center;
@@ -102,7 +108,7 @@ img {
 }
 
 .logo-image {
-    height: 140px; /* adjust 120–160 as you like */
+    height: 140px; /* adjust 120–160px as you like */
     width: auto;
 }
 
@@ -403,48 +409,3 @@ img {
     border: 1px solid #2a2d33;
     font-size: 0.95rem;
     color: #dcdcdc;
-}
-
-.highlight {
-    color: #f5d36b;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    .hero {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    .contact-grid {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    /* Stack header and return logo to normal flow on tablets/phones */
-    .site-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.75rem;
-        padding-right: 1.5rem;
-    }
-
-    .logo-link {
-        position: static;
-        align-self: flex-end;
-    }
-}
-
-@media (max-width: 600px) {
-    .section,
-    .hero {
-        padding: 2rem 1rem;
-    }
-
-    .header-nav {
-        flex-wrap: wrap;
-    }
-
-    /* Slightly shrink logo on very small screens */
-    .logo-image {
-        height: 150px;
-    }
-}
