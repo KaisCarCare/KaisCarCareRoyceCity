@@ -38,6 +38,7 @@ img {
     color: #b0b0b0;
 }
 
+/* Header layout: left = text logo, center = nav, right = image logo */
 .site-header {
     display: flex;
     align-items: center;
@@ -47,16 +48,11 @@ img {
     z-index: 100;
 }
 
-/* Right side of header: nav + logo together */
-.header-right {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; /* push content to the far right */
-    gap: 1.5rem;
-    flex: 1;                   /* let this side stretch so right edge is used */
+/* Left text logo */
+.header-left {
+    flex: 0 0 auto;
 }
 
-/* Logo text (left side) */
 .logo {
     display: flex;
     flex-direction: column;
@@ -75,25 +71,21 @@ img {
     color: #c2c2c2;
 }
 
-/* Nav + logo (right side) */
-.nav {
+/* Center nav */
+.header-nav {
+    flex: 1; /* takes available space between left and right */
     display: flex;
-    align-items: center;
+    justify-content: center;
     gap: 1rem;
+    align-items: center;
 }
 
-/* Link that wraps the logo image in the nav */
-.logo-link {
+/* Right image logo */
+.header-right {
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
-    text-decoration: none;
-    padding: 0;
-}
-
-/* Header logo image sizing */
-.logo-image {
-    height: 120px; /* adjust for bigger/smaller logo */
-    width: auto;
+    justify-content: flex-end;
 }
 
 /* Navigation links */
@@ -111,6 +103,19 @@ img {
 .nav-link.active {
     background-color: #f5d36b;
     color: #0b0c10;
+}
+
+/* Image logo link + size */
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0;
+}
+
+.logo-image {
+    height: 120px; /* make the logo big; adjust if needed */
+    width: auto;
 }
 
 /* Hero */
@@ -424,10 +429,8 @@ img {
         gap: 0.75rem;
     }
 
-    /* Keep nav/logo aligned on smaller screens */
-    .header-right {
-        width: 100%;
-        justify-content: space-between;
+    .header-nav {
+        justify-content: flex-start;
     }
 }
 
@@ -437,9 +440,9 @@ img {
         padding: 2rem 1rem;
     }
 
-    .header-right {
-        width: 100%;
-        justify-content: space-between;
+    .header-nav {
+        justify-content: flex-start;
+        flex-wrap: wrap;
     }
 }
 
