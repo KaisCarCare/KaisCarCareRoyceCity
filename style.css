@@ -51,7 +51,9 @@ img {
 .header-right {
     display: flex;
     align-items: center;
+    justify-content: flex-end; /* push content to the far right */
     gap: 1.5rem;
+    flex: 1;                   /* let this side stretch so right edge is used */
 }
 
 /* Logo text (left side) */
