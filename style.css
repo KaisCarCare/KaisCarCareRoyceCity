@@ -38,21 +38,22 @@ img {
     color: #b0b0b0;
 }
 
-/* Header: text logo + nav + pinned image logo */
+/* Header: text logo left, nav middle, image logo right */
 .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: sticky;
     top: 0;
     z-index: 100;
-
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-
-    /* reserve space on the right for the pinned logo */
-    padding-right: 160px;
+    width: 100%;
 }
 
 /* Left text logo */
+.header-left {
+    flex: 0 0 auto;
+}
+
 .logo {
     display: flex;
     flex-direction: column;
@@ -71,11 +72,21 @@ img {
     color: #c2c2c2;
 }
 
-/* Center nav */
+/* Middle nav */
 .header-nav {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Right image logo */
+.header-right {
+    flex: 1; /* stretch to take remaining space */
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: flex-end; /* push logo to far right */
 }
 
 /* Navigation links */
@@ -95,20 +106,25 @@ img {
     color: #0b0c10;
 }
 
-/* Logo image pinned in top-right */
+/* Image logo link + size */
 .logo-link {
-    position: absolute;
-    top: 8px;
-    right: 16px;
-
     display: flex;
     align-items: center;
     text-decoration: none;
+    padding: 0;
 }
 
 .logo-image {
-    height: 120px; /* adjust this for bigger/smaller logo */
+    height: 120px; /* bump this up if you want even bigger */
     width: auto;
+}
+
+/* Kill any arrow or pseudo-content on the logo link */
+.logo-link::before,
+.logo-link::after,
+.logo-image::before,
+.logo-image::after {
+    content: none !important;
 }
 
 /* Hero */
