@@ -22,7 +22,7 @@ img {
     display: block;
 }
 
-/* Header container */
+/* Header: simple, reliable layout */
 .site-header {
     position: sticky;
     top: 0;
@@ -30,11 +30,10 @@ img {
 
     display: flex;
     align-items: center;
-    gap: 2rem;
+    justify-content: space-between;
 
     padding: 1rem 1.5rem;
-    padding-right: 200px; /* room for the logo */
-    width: 100%;
+    background-color: #0b0c10;
 }
 
 /* Left text logo */
@@ -60,34 +59,50 @@ img {
     color: #c2c2c2;
 }
 
-/* Middle nav */
+/* Center nav */
 .header-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Right image logo */
+.header-right {
     flex: 0 0 auto;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: flex-end;
 }
 
-/* Right image logo container */
-.header-right {
-    flex: 0 0 auto;
+/* Navigation links */
+.nav-link {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Logo link pinned to top-right on desktop */
+.nav-link:hover {
+    background-color: #1c1f26;
+}
+
+.nav-link.active {
+    background-color: #f5d36b;
+    color: #0b0c10;
+}
+
+/* Logo link + size – NO absolute positioning */
 .logo-link {
-    position: absolute;
-    top: 8px;
-    right: 0;
-
     display: flex;
     align-items: center;
     text-decoration: none;
     padding: 0;
 }
 
-/* Logo image size */
 .logo-image {
-    height: 200px;
+    height: 140px; /* adjust 120–160 as you like */
     width: auto;
 }
 
