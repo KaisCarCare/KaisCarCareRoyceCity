@@ -32,9 +32,8 @@ img {
     align-items: center;
     gap: 2rem;
 
-    /* reserve space on the right so text/nav don't sit under the logo */
     padding: 1rem 1.5rem;
-    padding-right: 200px;
+    padding-right: 200px; /* room for the logo */
     width: 100%;
 }
 
@@ -69,12 +68,12 @@ img {
     gap: 1rem;
 }
 
-/* Right image logo: pinned to the top-right of the header */
+/* Right image logo container */
 .header-right {
     flex: 0 0 auto;
 }
 
-/* Link that wraps the logo image */
+/* Logo link pinned to top-right on desktop */
 .logo-link {
     position: absolute;
     top: 8px;
@@ -88,7 +87,7 @@ img {
 
 /* Logo image size */
 .logo-image {
-    height: 200px; /* adjust if you want smaller (e.g., 160px) */
+    height: 200px;
     width: auto;
 }
 
