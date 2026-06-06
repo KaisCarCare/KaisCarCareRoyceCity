@@ -404,6 +404,7 @@ img {
         grid-template-columns: minmax(0, 1fr);
     }
 
+    /* Stack header and return logo to normal flow on tablets/phones */
     .site-header {
         flex-direction: column;
         align-items: flex-start;
@@ -425,5 +426,10 @@ img {
 
     .header-nav {
         flex-wrap: wrap;
+    }
+
+    /* Slightly shrink logo on very small screens */
+    .logo-image {
+        height: 150px;
     }
 }
