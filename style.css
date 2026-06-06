@@ -22,31 +22,18 @@ img {
     display: block;
 }
 
-/* Layout containers */
-.site-header,
-.site-footer {
-    background-color: #0b0c10;
-    border-bottom: 1px solid #2a2d33;
-    padding: 1rem 1.5rem;
-}
-
-.site-footer {
-    border-top: 1px solid #2a2d33;
-    border-bottom: none;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #b0b0b0;
-}
-
-/* Header: text logo left, nav middle, image logo right */
+/* Header container */
 .site-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     position: sticky;
     top: 0;
     z-index: 100;
-    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    /* reserve space on the right so text/nav don't sit under the logo */
+    padding-right: 160px;
 }
 
 /* Left text logo */
@@ -64,7 +51,7 @@ img {
     letter-spacing: 0.08em;
     text-transform: uppercase;
     font-weight: 600;
-    color: #f5d36b; /* gold */
+    color: #f5d36b;
 }
 
 .logo-sub {
@@ -76,46 +63,31 @@ img {
 .header-nav {
     flex: 0 0 auto;
     display: flex;
-    justify-content: center;
+    align-items: center;
     gap: 1rem;
-    align-items: center;
 }
 
-/* Right image logo */
+/* Right image logo: pinned to the top-right of the header */
 .header-right {
-    flex: 1; /* stretch to take remaining space */
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; /* push logo to far right */
+    /* we keep it as a normal container, but the link itself is pinned */
+    flex: 0 0 auto;
 }
 
-/* Navigation links */
-.nav-link {
-    font-size: 0.95rem;
-    padding: 0.4rem 0.8rem;
-    border-radius: 999px;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.nav-link:hover {
-    background-color: #1c1f26;
-}
-
-.nav-link.active {
-    background-color: #f5d36b;
-    color: #0b0c10;
-}
-
-/* Image logo link + size */
+/* Link that wraps the logo image */
 .logo-link {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+
     display: flex;
     align-items: center;
     text-decoration: none;
     padding: 0;
 }
 
+/* Logo image size */
 .logo-image {
-    height: 120px; /* bump this up if you want even bigger */
+    height: 120px;
     width: auto;
 }
 
