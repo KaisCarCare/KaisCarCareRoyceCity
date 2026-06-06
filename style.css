@@ -70,7 +70,7 @@ img {
 .nav {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 2.5rem;
 }
 
 /* Link that wraps the logo image in the nav */
@@ -81,7 +81,7 @@ img {
 
 /* Header logo image sizing */
 .logo-image {
-    height: 72px;       /* adjust up/down to taste */
+    height: 72px;       /
     width: auto;
 }
 
