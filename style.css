@@ -33,7 +33,9 @@ img {
     gap: 2rem;
 
     /* reserve space on the right so text/nav don't sit under the logo */
-    padding-right: 160px;
+    padding: 1rem 1.5rem;
+    padding-right: 200px;
+    width: 100%;
 }
 
 /* Left text logo */
@@ -69,7 +71,6 @@ img {
 
 /* Right image logo: pinned to the top-right of the header */
 .header-right {
-    /* we keep it as a normal container, but the link itself is pinned */
     flex: 0 0 auto;
 }
 
@@ -77,7 +78,7 @@ img {
 .logo-link {
     position: absolute;
     top: 8px;
-    right: 50px;
+    right: 0;
 
     display: flex;
     align-items: center;
@@ -87,7 +88,7 @@ img {
 
 /* Logo image size */
 .logo-image {
-    height: 200px;
+    height: 200px; /* adjust if you want smaller (e.g., 160px) */
     width: auto;
 }
 
@@ -426,12 +427,4 @@ img {
     .header-nav {
         flex-wrap: wrap;
     }
-}
-
-/* Kill any arrow or pseudo-content on the logo link */
-.logo-link::before,
-.logo-link::after,
-.logo-image::before,
-.logo-image::after {
-    content: none !important;
 }
