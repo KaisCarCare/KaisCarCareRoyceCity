@@ -47,6 +47,7 @@ img {
     z-index: 100;
 }
 
+/* Logo text (left side) */
 .logo {
     display: flex;
     flex-direction: column;
@@ -65,11 +66,26 @@ img {
     color: #c2c2c2;
 }
 
+/* Nav + logo (right side) */
 .nav {
     display: flex;
+    align-items: center;
     gap: 1rem;
 }
 
+/* Link that wraps the logo image in the nav */
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+/* Header logo image sizing */
+.logo-image {
+    height: 48px;       /* adjust up/down to taste */
+    width: auto;
+}
+
+/* Navigation links */
 .nav-link {
     font-size: 0.95rem;
     padding: 0.4rem 0.8rem;
@@ -395,6 +411,12 @@ img {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.75rem;
+    }
+
+    /* Keep nav/logo aligned on smaller screens */
+    .nav {
+        width: 100%;
+        justify-content: flex-start;
     }
 }
 
